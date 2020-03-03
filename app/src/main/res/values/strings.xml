@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TPAndroid</string>
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
+    <string name="titre_appli">Gestion de contacts</string>
+</resources>
