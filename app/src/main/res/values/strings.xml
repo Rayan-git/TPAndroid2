@@ -1,5 +1,26 @@
 <resources>
-    <string name="app_name">TPAndroid</string>
+    <string name="app_name">Contact</string>
     <string name="title_activity_menu_principal">MenuPrincipal</string>
     <string name="titre_appli">Gestion de contacts</string>
+    <string name="demandeNom">Entrez votre nom : </string>
+    <string name="boutonValider">Valider</string>
+    <string name="boutonEntrer">Entrer</string>
+    <string name="description_photo">Photo du contact</string>
+    <string name="description_favori">Étoile de favori</string>
+    <string name="creation_prenom">Prénom : </string>
+    <string name="hint_prenom">Jean</string>
+    <string name="hint_nom">Dupont</string>
+    <string name="hint_tel">0712345678</string>
+    <string name="hint_mail">jean.dupont@gmail.com</string>
+    <string name="hint_ville">Paris</string>
+    <string name="creation_nom">Nom : </string>
+    <string name="creation_tel">Téléphone : </string>
+    <string name="creation_mail">Adresse mail : </string>
+    <string name="creation_ville">Ville : </string>
+    <string name="creation_favori">Favori : </string>
+    <string name="titre_creation">"Création d'un contact"</string>
+    <string name="bouton_creation">Créer le contact</string>
+    <string name="nom_user">"Nom d'utilisateur"</string>
+    <string name="detail_bouton_sms">Envoyer un sms</string>
+    <string name="detail_bouton_mail">Envoyer un mail</string>
 </resources>

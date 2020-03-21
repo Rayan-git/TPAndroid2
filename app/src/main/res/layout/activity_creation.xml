@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:textAlignment="center"
+            style="@style/Titre"
+            android:text="@string/titre_creation"/>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:text="@string/creation_prenom"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="end"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/creation_prenom"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:layout_marginHorizontal="20dp"
+            android:autofillHints="@string/hint_prenom"
+            android:hint="@string/hint_prenom" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/creation_nom"
+            android:textSize="20sp"
+            android:layout_gravity="end" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/creation_nom"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:autofillHints="@string/hint_nom"
+            android:hint="@string/hint_nom"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="end"
+            android:text="@string/creation_favori"
+            android:textSize="20sp"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/creation_favori"
+            android:layout_gravity="start|center"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="20dp"
+            android:text="@string/creation_mail"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/creation_mail"
+            android:layout_marginHorizontal="20dp"
+            android:autofillHints="@string/hint_mail"
+            android:hint="@string/hint_mail"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:paddingVertical="20dp"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="end"
+            android:text="@string/creation_tel"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/creation_tel"
+            android:layout_marginHorizontal="20dp"
+            android:digits="0123456789."
+            android:autofillHints="@string/hint_tel"
+            android:hint="@string/hint_tel"
+            android:inputType="number"
+            android:textSize="20sp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:paddingVertical="20dp"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:text="@string/creation_ville"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/creation_ville"
+            android:layout_marginHorizontal="20dp"
+            android:autofillHints="@string/hint_ville"
+            android:hint="@string/hint_ville"
+            android:inputType="text"
+            android:textSize="20sp" />
+    </TableRow>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:textSize="20sp"
+        android:id="@+id/bouton_creation"
+        android:text="@string/bouton_creation"/>
+</TableLayout>

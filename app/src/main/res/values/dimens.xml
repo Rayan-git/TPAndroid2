@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hauteur_list">110dp</dimen>
+    <dimen name="hauteur_image_principale">260dp</dimen>
+    <dimen name="normal_size">20sp</dimen>
+    <dimen name="normal_margin">5dp</dimen>
+</resources>

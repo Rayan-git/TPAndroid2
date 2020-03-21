@@ -5,21 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:layout_height="260dp"
             android:src="@drawable/logo_contact"
-            android:id="@+id/image_principal"/>
+            android:layout_centerHorizontal="true"
+            android:id="@+id/image_principal"
+            android:contentDescription="@string/app_name"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/titre_principal"
             android:text="@string/titre_appli"
-            android:textSize="35dp"
+            style="@style/Titre"
+            android:layout_marginTop="30dp"
             android:layout_below="@id/image_principal"
             android:layout_centerHorizontal="true"/>
         <RelativeLayout
@@ -31,11 +30,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/demandeNom"
                 android:id="@+id/label_user"
-                android:text="Entrez votre nom :"
-                android:layout_marginLeft="20dp"
-                android:textSize="20dp"
-                android:layout_alignParentLeft="true"/>
+                android:textSize="20sp"
+                />
 
             <EditText
                 android:id="@+id/user_edittext"
@@ -43,9 +43,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_toRightOf="@id/label_user"
+                android:inputType="text"
                 android:layout_centerHorizontal="true"
                 android:minWidth="180dp"
+                android:layout_toEndOf="@id/label_user"
+                android:hint="@string/nom_user"
+                android:autofillHints="@string/nom_user"
                 />
             <Button
                 android:layout_width="wrap_content"
@@ -53,10 +56,19 @@
                 android:layout_below="@id/user_edittext"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="Valider"
+                android:textSize="@dimen/normal_size"
+                android:text="@string/boutonValider"
                 android:id="@+id/bouton_valider"/>
         </RelativeLayout>
-    </RelativeLayout>
+    <Button
+        android:id="@+id/buttonEntrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boutonEntrer"
+        android:visibility="invisible"
+        android:layout_below="@id/titre_principal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
 
 
 </RelativeLayout>
