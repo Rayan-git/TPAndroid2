@@ -26,4 +26,6 @@
     <string name="detail_titre">Detail contact</string>
     <string name="titre_modifier">Modification du contact</string>
     <string name="bouton_modification">Modifier le contact</string>
+    <string name="photo">Choisir</string>
+    <string name="edit_photo">Nom de la photo</string>
 </resources>

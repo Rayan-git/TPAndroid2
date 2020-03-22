@@ -116,6 +116,25 @@
             android:inputType="text"
             android:textSize="20sp" />
     </TableRow>
+    <TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:paddingVertical="20dp"
+            android:textSize="20sp"
+            android:id="@+id/bouton_photo_modification"
+            android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:text="@string/photo"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/modification_photo"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:hint="@string/edit_photo"/>
+    </TableRow>
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"

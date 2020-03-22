@@ -1,6 +1,9 @@
 package dehant.rayan.tp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +15,9 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MenuContacts extends AppCompatActivity {
+    private CoordinatorLayout coordinatorLayout;
+    private RecyclerView recyclerView;
+
     private ContactAdapter adapter;
     private ListView listView;
 
