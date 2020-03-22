@@ -26,6 +26,7 @@ public class MenuContacts extends AppCompatActivity {
         Toast toast = Toast.makeText(MenuContacts.this, "Bienvenue à vous "+funct.getName()+" !", Toast.LENGTH_LONG);
         toast.show();
 
+
         ContactAdapter contactAdapter=new ContactAdapter(this);
         listView=this.findViewById(R.id.list);
         listView.setAdapter(contactAdapter);
@@ -45,8 +46,9 @@ public class MenuContacts extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Contact selected=(Contact) parent.getItemAtPosition(position);
                 Intent intent=new Intent(MenuContacts.this,Detail.class);
+                intent.putExtra("indice",position);
                 intent.putExtra("personne",selected);
-                MenuContacts.this.startActivity(intent);
+                MenuContacts.this.startActivityForResult(intent,2);
             }
         });
 
@@ -55,7 +57,7 @@ public class MenuContacts extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode,Intent data){
         super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode==1){
+        if(requestCode==1 || requestCode==2){
             if(resultCode==RESULT_OK){
                 adapter=new ContactAdapter(this);
                 listView.setAdapter(adapter);

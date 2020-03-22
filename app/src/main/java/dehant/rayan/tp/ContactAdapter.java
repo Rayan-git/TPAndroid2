@@ -22,7 +22,6 @@ public class ContactAdapter extends BaseAdapter {
         inflater=LayoutInflater.from(con);
         list=funct.loadListContact();
         ArrayList<Contact> favoris=new ArrayList<>();
-        int cpt=0;
         Contact courant;
         ArrayList<Contact> nonFav=new ArrayList<>();
         for(int i=0;i<list.size();i++){
@@ -32,14 +31,13 @@ public class ContactAdapter extends BaseAdapter {
             }else{
                 nonFav.add(courant);
             }
-            cpt++;
         }
-        System.out.println(cpt);
         sort(favoris);
         sort(nonFav);
         list=new ArrayList<>();
         list.addAll(favoris);
         list.addAll(nonFav);
+        funct.saveList(list);
     }
 
     private void sort(ArrayList<Contact> lst){
@@ -89,7 +87,6 @@ public class ContactAdapter extends BaseAdapter {
         }else{
             fav.setVisibility(View.INVISIBLE);
         }
-        System.out.println("Test ->"+list.get(position).isFavori()+" "+list.get(position).getNom());
         return layoutItem;
     }
 }

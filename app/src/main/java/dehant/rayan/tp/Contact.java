@@ -11,7 +11,7 @@ public class Contact implements Parcelable {
     private String tel;
     private String ville;
     private int image;
-    private boolean favori;
+    private String favori;
 
     public Contact(Parcel in){
         nom=in.readString();
@@ -19,7 +19,7 @@ public class Contact implements Parcelable {
         mail=in.readString();
         tel=in.readString();
         ville=in.readString();
-        favori=in.readBoolean();
+        favori=in.readString();
         image=in.readInt();
     }
 
@@ -30,7 +30,12 @@ public class Contact implements Parcelable {
         ville=v;
         tel=t;
         image=im;
-        favori=fav;
+        if(fav){
+            favori="true"; //ici on a transforme le booléen en string car la méthode writeBoolean d'un Parcel nécessite l'API 29 (pour plus de flexibilité fait ce choix)
+        }else{
+            favori="false";
+        }
+
     }
 
     public static final Creator<Contact> CREATOR=new Creator<Contact>() {
@@ -52,7 +57,7 @@ public class Contact implements Parcelable {
         dest.writeString(mail);
         dest.writeString(tel);
         dest.writeString(ville);
-        dest.writeBoolean(favori);
+        dest.writeString(favori);
         dest.writeInt(image);
     }
 
@@ -114,10 +119,18 @@ public class Contact implements Parcelable {
     }
 
     public boolean isFavori() {
-        return favori;
+        if(favori.equals("true")){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public void setFavori(boolean favori) {
-        this.favori = favori;
+    public void setFavori(String favori) {
+        if(favori.equals("true")){
+            this.favori=favori;
+        }else{
+            this.favori="false";
+        }
     }
 }

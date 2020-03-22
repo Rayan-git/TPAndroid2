@@ -23,4 +23,7 @@
     <string name="nom_user">"Nom d'utilisateur"</string>
     <string name="detail_bouton_sms">Envoyer un sms</string>
     <string name="detail_bouton_mail">Envoyer un mail</string>
+    <string name="detail_titre">Detail contact</string>
+    <string name="titre_modifier">Modification du contact</string>
+    <string name="bouton_modification">Modifier le contact</string>
 </resources>

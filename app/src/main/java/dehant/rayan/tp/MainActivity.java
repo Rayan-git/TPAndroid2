@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
             but.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    funct.addContact(new Contact("Dupont","Jean","jean.dupont@gmail.com","Paris","0712345678",R.drawable.personne,true));
+                    funct.addContact(new Contact("NomTest","PrénomTest","test.test@gmail.com","test","0712345678",R.drawable.personne,false));
                     if (et.getText().toString().equals("") || et.getText().toString().equals("Nom d'utilisateur")) {
                         Toast toast = Toast.makeText(MainActivity.this, "Erreur dans la saisie du nom !", Toast.LENGTH_LONG);
                         toast.show();

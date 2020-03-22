@@ -38,6 +38,11 @@ public class Fonctions {
         saveList(listContact);
     }
 
+    public void removeContact(int cont){
+        listContact.remove(cont);
+        saveList(listContact);
+    }
+
     public void saveList(ArrayList<Contact> list){
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = settings.edit();
